@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DTECTOR.View.EditarMotores"
+             NavigationPage.HasNavigationBar="False"
+                          BackgroundColor="White">
+
+    <StackLayout>
+        <Image Source="flechas_izquierda.png" HeightRequest="25" Margin="-350,0,0,0">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding VolverCommand}"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Label Text="D-Tector" FontSize="40" TextColor="Black" Padding="132,-10,0,0"/>
+        <Label Text="Editar Motor" FontSize="25" TextColor="Black" Padding="110,0,0,0" />
+        <StackLayout>
+            <Frame CornerRadius="10" BackgroundColor="#97FF83" HeightRequest="120" Margin="5,3,5,3" Padding="5,0,0,0">
+                <Grid>
+                    <Label Text="Nombre del Motor" Grid.Column="0" Grid.Row="0" FontSize="20"/>
+                    <Entry Placeholder="Modelo" Grid.Column="1" Grid.Row="0"/>
+                    <Label Text="Ubicacion del Motor" Grid.Column="0" Grid.Row="1"  FontSize="20"/>
+                    <Entry Placeholder="Ubicacion" Grid.Column="1" Grid.Row="1"/>
+                    <Label Text="Fecha: 2/20/2024" TextColor="Black" Grid.Column="0" Grid.Row="2"/>
+                </Grid>
+            </Frame>
+            <Button Text="Editar" CornerRadius="10" BackgroundColor="Gray" Command="{Binding EditarCommand}"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

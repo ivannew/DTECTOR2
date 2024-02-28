@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DTECTOR.View.MainPage"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <StackLayout Margin="5,10,5,10">
+            <Image Source="https://i.ibb.co/bRffpVM/flecha-izquierda.png" WidthRequest="50" Margin="-10,10,290,-20">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VolverCommand}"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="HISTORIAL" FontSize="40" TextColor="Black" HorizontalOptions="Center" />
+
+            <!-- Primer Registro -->
+            <Frame Margin="10" CornerRadius="20" BackgroundColor="#F0E8E8">
+                <StackLayout Padding="10">
+                    <Label Text="Fecha: 03/03/2024" TextColor="Black"/>
+                    <Label Text="Nombre del Sensor:" TextColor="Black"/>
+                    <Label Text="Nombre del Motor:" TextColor="Black"/>
+                    <Label Text="Ubicación:" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="1"/>
+                    <Button Text="Estado" BackgroundColor="#97FF83" CornerRadius="10" TextColor="Black" VerticalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Segundo Registro -->
+            <Frame Margin="10" CornerRadius="20" BackgroundColor="#F0E8E8">
+                <StackLayout Padding="10">
+                    <Label Text="Fecha: 03/03/2024" TextColor="Black"/>
+                    <Label Text="Nombre del Sensor:" TextColor="Black"/>
+                    <Label Text="Nombre del Motor:" TextColor="Black"/>
+                    <Label Text="Ubicación:" TextColor="Black"/>
+                    <BoxView Color="Gray" HeightRequest="1"/>
+                    <Button Text="Estado" BackgroundColor="#FF6F6F" CornerRadius="10" TextColor="Black" VerticalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- Tercer Registro -->
+            <Frame Margin="10" CornerRadius="20" BackgroundColor="#F0E8E8">
+                <StackLayout Padding="10">
+                    <Label Text="Fecha: 03/03/2024" TextColor="Black"/>
+                    <Label Text="Nombre del Sensor:" TextColor="Black"/>
+                    <Label Text="Nombre del Motor:" TextColor="Black"/>
+                    <Label Text="Ubicación:" TextColor="Black"/>
+                    <Button Text="Estado" BackgroundColor="#FAFF6F" CornerRadius="10" TextColor="Black" VerticalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

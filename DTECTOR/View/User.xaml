@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DTECTOR.View.User"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+    
+    <Grid RowDefinitions="80,*"
+          BackgroundColor="White">
+        <StackLayout Orientation="Horizontal" Padding="15">
+            <!-- ESTA ES LA PARTE DE PERFIL O SEA LA IMAGEN -->
+            <Image Source="https://i.ibb.co/bRffpVM/flecha-izquierda.png" WidthRequest="50" Margin="-10,10,0,-20">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding DetailsCommand}"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="Perfil" Margin="105,0,0,0" FontSize="20" TextColor="Black"></Label>
+        </StackLayout>
+        <!-- ESTA ES LA PARTE DE PERFIL O SEA LA IMAGEN -->
+        <StackLayout Grid.Row="1" Grid.Column="0" >
+            <Image Source="https://i.ibb.co/Cwc70cb/perfil.png" WidthRequest="100" Margin="0,0,5,0" ></Image>
+        </StackLayout>
+        <!-- ESTA ES LA PARTE DE LOS ENTRY Y LABEL PARA ESCRIBIR LA INFORMACIÓN-->
+        <StackLayout Grid.Row="1" Grid.Column="0" Margin="20,100,0,0">
+            <Label Text="Nombre: " TextColor="Black"></Label>
+            <Entry Placeholder="Agregar Nombre"></Entry>
+            <Label Text="Número: " TextColor="Black"></Label>
+            <Entry Placeholder="Agregar Número" Keyboard="Numeric"></Entry>
+            <Label Text="Correo: " TextColor="Black"></Label>
+            <Entry Placeholder="(Opcional)" Keyboard="Email"></Entry>
+            <Label Text="Contraseña: " TextColor="Black"></Label>
+            <Entry Placeholder="Escribir contraseña" IsPassword="True"></Entry>
+        </StackLayout>
+        <!-- ES EL BOTON DE GUARDAR -->
+        <Frame Grid.Row="2" Grid.Column="0" CornerRadius="30" Margin="20,50,20,50" BackgroundColor="White" >
+            <StackLayout Margin="0,80,0,0">
+                <Button
+                    Text="Guardar"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    BackgroundColor="#97FF83"
+                    BorderColor="#97FF83"
+                    BorderWidth="6"
+                    CornerRadius="15"
+                    FontSize="19"
+                    WidthRequest="150"
+                    HeightRequest="60" Command="{Binding DetailsCommand}"/>
+                <Button Text="Cerrar Sesion" Command="{Binding CloseSesionCommand}" TextColor="Black" HorizontalOptions="Center" BackgroundColor="#97FF83" BorderColor="#97FF83" 
+                        BorderWidth="7" CornerRadius="15" FontSize="19" WidthRequest="150" HeightRequest="70"/>
+            </StackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

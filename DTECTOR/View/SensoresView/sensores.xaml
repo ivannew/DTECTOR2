@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DTECTOR.View.SensoresView.sensores"
+             BackgroundColor="White"
+ NavigationPage.HasNavigationBar="False">
+
+    <Grid RowDefinitions="60,*"
+          BackgroundColor="#FSF6F6">
+        <Image Source="https://i.ibb.co/bRffpVM/flecha-izquierda.png" WidthRequest="50" Margin="-10,10,290,-20">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding VolverCommand}"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Label Text="Sensor de Gas" HorizontalOptions="Center" VerticalOptions="Center" FontSize="28" FontAttributes="Bold" TextColor="DarkGreen"/>
+
+        <Frame Grid.Row="1" WidthRequest="280"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               CornerRadius="10"
+               HeightRequest="120"
+               Margin="0,0,0,500" >
+
+            <StackLayout Margin="10,10,10,0">
+                <Label Text="Nombre: CDS"
+                       CharacterSpacing="0"
+                       FontSize="20"
+                       TextColor="Black"/>
+                <Label Text="Ubicación: CDS"
+                       HorizontalOptions="Start"
+                       TextTransform="None" TextColor="Black"
+                       FontSize="20"/>
+                <Label Text="Estado: Bien"
+                       HorizontalOptions="Start" TextColor="Black"
+                       TextTransform="None"
+                       FontSize="20"/>
+            </StackLayout>
+
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding IrAEditarCommand}" />
+            </Frame.GestureRecognizers>
+
+        </Frame>
+
+        <Button Text="+"
+                Grid.Row="1"
+                HeightRequest="80"
+                WidthRequest="100"
+                VerticalOptions="End" 
+                HorizontalOptions="End"
+                CornerRadius="20"
+                Margin="15"
+                FontSize="35"
+                FontAttributes="Bold"
+                BackgroundColor="DarkGreen"
+                Command="{Binding IrARegistrocommand}"/>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DTECTOR.View.SensoresView.AgregarSensor"
+             NavigationPage.HasNavigationBar="False"
+                          BackgroundColor="White">
+
+    <Grid RowDefinitions="80,*"
+        BackgroundColor="White">
+        <StackLayout Orientation="Horizontal" Padding="15">
+
+            <Image Source="https://i.ibb.co/QQT9zmJ/respuesta.png" WidthRequest="70">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding Volvercommand}"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+        </StackLayout>
+        <StackLayout Grid.Row="1" Margin="10">
+            <StackLayout Orientation="Horizontal">
+
+                <Entry Placeholder="Nombre" PlaceholderColor="Gray" 
+            TextColor="Black"
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Entry Placeholder="Ubicación" PlaceholderColor="Gray" 
+           TextColor="Black"
+           VerticalOptions="CenterAndExpand"
+           HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout>
+                <Entry Placeholder="Estado: " 
+           TextColor="Black"
+           
+                     VerticalOptions="CenterAndExpand"
+     HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <!--BOTON DE AGG -->
+
+            <Frame HorizontalOptions="Center"
+                 Padding="6"
+                 
+                 Margin="0,150,0,0"
+                 CornerRadius="30"
+                 HasShadow="False"
+                 BackgroundColor="DarkRed">
+                <Button
+                  Text="+"
+                  TextColor="White"
+                  HorizontalOptions="Center"
+                  BackgroundColor="DarkRed"
+                  BorderColor="DarkRed"
+                  BorderWidth="6"
+                  CornerRadius="15"
+                  FontSize="25"
+                  WidthRequest="150"
+                  HeightRequest="60"
+                  Command="{Binding Insertarcommand}"/>
+            </Frame>
+
+        </StackLayout>
+    </Grid>
+</ContentPage>

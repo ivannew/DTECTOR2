@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DTECTOR.View.Motor"
+             NavigationPage.HasNavigationBar="False"
+                          BackgroundColor="White"
+>
+
+    <ScrollView>
+        <StackLayout>
+            <Image Source="flechas_izquierda.png" HeightRequest="25" Margin="-350,0,0,0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VolverCommand}"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="D-Tector" FontSize="40" TextColor="Black" Padding="132,-10,0,0" />
+            <Label Text="Lista de Motores" FontSize="25" TextColor="Black" Padding="110,0,0,0" />
+            <!--s-->
+            <Frame Grid.Row="0" Margin="10" CornerRadius="20" BackgroundColor="#F0E8E8">
+                <StackLayout>
+                    <Label Text="Nombre" TextColor="Black" />
+                    <Label Text="Fecha" TextColor="Black" />
+                    <Label Text="Ubicación" TextColor="Black" />
+                    <Button Text="Eliminar" BackgroundColor="#FF6F6F" Grid.Column="0" Grid.Row="2" Command="{Binding EliminarCommand}"/>
+                    <Button Text="Editar" BackgroundColor="#FAFF6F" Grid.Column="1" Grid.Row="2" Command="{Binding EditarCommand}"/>
+                </StackLayout>
+            </Frame>
+            <!--s-->
+            <Frame Grid.Row="0" Margin="10" CornerRadius="20" BackgroundColor="#F0E8E8">
+                <StackLayout>
+                    <Label Text="Nombre" TextColor="Black" />
+                    <Label Text="Fecha" TextColor="Black" />
+                    <Label Text="Ubicación" TextColor="Black" />
+                    <Button Text="Eliminar" BackgroundColor="#FF6F6F" Grid.Column="0" Grid.Row="2"/>
+                    <Button Text="Editar" BackgroundColor="#FAFF6F" Grid.Column="1" Grid.Row="2" Command="{Binding EditarCommand}"/>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Row="0" Margin="10" CornerRadius="20" BackgroundColor="#F0E8E8">
+                <StackLayout>
+                    <Label Text="Nombre" TextColor="Black" />
+                    <Label Text="Fecha" TextColor="Black" />
+                    <Label Text="Ubicación" TextColor="Black" />
+                    <Button Text="Eliminar" BackgroundColor="#FF6F6F" Grid.Column="0" Grid.Row="2"/>
+                    <Button Text="Editar" BackgroundColor="#FAFF6F" Grid.Column="1" Grid.Row="2" Command="{Binding EditarCommand}"/>
+                </StackLayout>
+            </Frame>
+            <Button Text="+" FontSize="30" Command="{Binding CrearCommand}"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

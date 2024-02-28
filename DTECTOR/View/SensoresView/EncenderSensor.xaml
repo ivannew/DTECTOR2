@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DTECTOR.View.SensoresView.EncenderSensor"
+              BackgroundColor="White"
+              NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image Source="https://i.ibb.co/bRffpVM/flecha-izquierda.png" WidthRequest="50" Margin="-10,10,290,-20">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding VolverCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Text="SENSORES" HorizontalOptions="Center" TextColor="Black" Margin="0,20,0,20" FontSize="24" />
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- Primer Frame -->
+                    <Frame Grid.Row="0" Margin="2" CornerRadius="20" BackgroundColor="#F0E8E8">
+                        <StackLayout>
+                            <Label Text="Nombre" TextColor="Black" />
+                            <Label Text="Fecha" TextColor="Black" />
+                            <Label Text="Ubicación" TextColor="Black" />
+                            <Button Text="Encender" BackgroundColor="#C8E6C9" TextColor="Black" CornerRadius="10" FontSize="16"/>
+                            <Button Text="Apagar" BackgroundColor="#FFCDD2" TextColor="Black" CornerRadius="10" FontSize="16"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SensoresCommand}"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- Segundo Frame -->
+                    <Frame Grid.Row="1" Margin="10" CornerRadius="20" BackgroundColor="#F0E8E8">
+                        <StackLayout>
+                            <Label Text="Nombre" TextColor="Black" />
+                            <Label Text="Fecha" TextColor="Black" />
+                            <Label Text="Ubicación" TextColor="Black" />
+                            <Button Text="Encender" BackgroundColor="#C8E6C9" TextColor="Black" CornerRadius="10" FontSize="16"/>
+                            <Button Text="Apagar" BackgroundColor="#FFCDD2" TextColor="Black" CornerRadius="10" FontSize="16"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SensoresCommand}"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+
+                    <!-- Tercer Frame -->
+                    <Frame Grid.Row="2" Margin="10" CornerRadius="20" BackgroundColor="#F0E8E8">
+                        <StackLayout>
+                            <Label Text="Nombre" TextColor="Black" />
+                            <Label Text="Fecha" TextColor="Black" />
+                            <Label Text="Ubicación" TextColor="Black" />
+                            <Button Text="Encender" BackgroundColor="#C8E6C9" TextColor="Black" CornerRadius="10" FontSize="16"/>
+                            <Button Text="Apagar" BackgroundColor="#FFCDD2" TextColor="Black" CornerRadius="10" FontSize="16"/>
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SensoresCommand}"/>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
