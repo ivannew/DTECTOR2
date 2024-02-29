@@ -35,12 +35,17 @@ namespace DTECTOR.ViewModel.VMGas.VM_Motores
         {
             await Navigation.PushModalAsync(new Motor());
         }
+        public async Task IRA()
+        {
+            await Navigation.PushModalAsync(new EncenderMotor());
+        }
         public async Task Volver()
         {
             await Navigation.PushModalAsync(new TiempoReal());
         }
         #endregion
         #region Commands
+        public ICommand irCommand => new Command(async () => await IRA());
         public ICommand MotoresCommand => new Command(async () => await DetallesMotores());
         public ICommand VolverCommand => new Command(async () => await Volver());
         #endregion

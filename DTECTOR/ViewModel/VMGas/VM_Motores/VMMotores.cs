@@ -19,7 +19,7 @@ namespace DTECTOR.ViewModel.VMGas.VM_Motores
         #region Process
         public async Task Volver()
         {
-            await Navigation.PushModalAsync(new MainPage());
+            await Navigation.PushModalAsync(new TiempoReal());
         }
         public async Task Crear()
         {

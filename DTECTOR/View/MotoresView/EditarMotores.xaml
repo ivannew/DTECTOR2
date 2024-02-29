@@ -3,27 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DTECTOR.View.EditarMotores"
              NavigationPage.HasNavigationBar="False"
+              xmlns:sombras="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows"
                           BackgroundColor="White">
 
     <StackLayout>
-        <Image Source="flechas_izquierda.png" HeightRequest="25" Margin="-350,0,0,0">
+        <Image Source="https://i.ibb.co/bRffpVM/flecha-izquierda.png" WidthRequest="50" Margin="-10,10,290,-20">
             <Image.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding VolverCommand}"/>
             </Image.GestureRecognizers>
         </Image>
-        <Label Text="D-Tector" FontSize="40" TextColor="Black" Padding="132,-10,0,0"/>
-        <Label Text="Editar Motor" FontSize="25" TextColor="Black" Padding="110,0,0,0" />
+        <Label Text="MOTOR" FontSize="40" TextColor="Black" HorizontalOptions="Center" />
+   
         <StackLayout>
-            <Frame CornerRadius="10" BackgroundColor="#97FF83" HeightRequest="120" Margin="5,3,5,3" Padding="5,0,0,0">
-                <Grid>
-                    <Label Text="Nombre del Motor" Grid.Column="0" Grid.Row="0" FontSize="20"/>
-                    <Entry Placeholder="Modelo" Grid.Column="1" Grid.Row="0"/>
-                    <Label Text="Ubicacion del Motor" Grid.Column="0" Grid.Row="1"  FontSize="20"/>
-                    <Entry Placeholder="Ubicacion" Grid.Column="1" Grid.Row="1"/>
-                    <Label Text="Fecha: 2/20/2024" TextColor="Black" Grid.Column="0" Grid.Row="2"/>
-                </Grid>
-            </Frame>
-            <Button Text="Editar" CornerRadius="10" BackgroundColor="Gray" Command="{Binding EditarCommand}"/>
+            <Frame CornerRadius="20" BackgroundColor="#ffff" Margin="20,10,20,10" HeightRequest="300" >
+                <StackLayout>
+                    <Label Text="Nombre del Motor" TextColor="Black" FontSize="20"/>
+                    <Entry Placeholder="Modelo" TextColor="Black" PlaceholderColor="Gray"/>
+                    <Label Text="Ubicacion del Motor" TextColor="Black" FontSize="20"/>
+                    <Entry Placeholder="Ubicacion"  PlaceholderColor="Gray"/>
+                    <Label Text="Fecha: 2/20/2024" FontSize="20" TextColor="Black" />
+                    <Entry Placeholder="Ubicacion" PlaceholderColor="Gray"/>
+                </StackLayout>
+        </Frame>
+
+            <sombras:Shadows CornerRadius="20"
+              Shades="{sombras:SingleShade Offset='1,0',Opacity=1.1, Color=#FA4F4F,BlurRadius=20}">
+
+                <Button Text="Editar" CornerRadius="20" Margin="60,0,60,10" BackgroundColor="#FF7272" Command="{Binding EditarCommand}"/>
+            </sombras:Shadows>
         </StackLayout>
+        <StackLayout.Background>
+            <LinearGradientBrush StartPoint="0.2,0.3" EndPoint="1,1">
+                <GradientStop Color="#FA4F4F" Offset="0.2" />
+                <GradientStop Color="White" Offset=".0"/>
+            </LinearGradientBrush>
+        </StackLayout.Background>
     </StackLayout>
 </ContentPage>

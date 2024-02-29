@@ -3,25 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DTECTOR.View.User"
              BackgroundColor="White"
-             NavigationPage.HasNavigationBar="False">
-    
-    <Grid RowDefinitions="80,*"
-          BackgroundColor="White">
-        <StackLayout Orientation="Horizontal" Padding="15">
+             NavigationPage.HasNavigationBar="False"
+             xmlns:sombras="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows">
+
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
             <!-- ESTA ES LA PARTE DE PERFIL O SEA LA IMAGEN -->
-            <Image Source="https://i.ibb.co/bRffpVM/flecha-izquierda.png" WidthRequest="50" Margin="-10,10,0,-20">
+            <Image Source="https://i.ibb.co/bRffpVM/flecha-izquierda.png" WidthRequest="50" Margin="10,10,0,-20">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding DetailsCommand}"/>
                 </Image.GestureRecognizers>
             </Image>
-            <Label Text="Perfil" Margin="105,0,0,0" FontSize="20" TextColor="Black"></Label>
+            <Label Text="PERFIL" HorizontalOptions="Center" Margin="80,0,10,0" FontSize="20" TextColor="White"></Label>
         </StackLayout>
         <!-- ESTA ES LA PARTE DE PERFIL O SEA LA IMAGEN -->
         <StackLayout Grid.Row="1" Grid.Column="0" >
-            <Image Source="https://i.ibb.co/Cwc70cb/perfil.png" WidthRequest="100" Margin="0,0,5,0" ></Image>
+            <Image Source="https://i.ibb.co/Cz9X7w9/usuario-3.png" WidthRequest="100" Margin="0,0,5,0" ></Image>
         </StackLayout>
         <!-- ESTA ES LA PARTE DE LOS ENTRY Y LABEL PARA ESCRIBIR LA INFORMACIÓN-->
-        <StackLayout Grid.Row="1" Grid.Column="0" Margin="20,100,0,0">
+
+        <Frame TranslationY="20" CornerRadius="20" Margin="10,10,10,-300">
+            <StackLayout>
             <Label Text="Nombre: " TextColor="Black"></Label>
             <Entry Placeholder="Agregar Nombre"></Entry>
             <Label Text="Número: " TextColor="Black"></Label>
@@ -31,23 +33,39 @@
             <Label Text="Contraseña: " TextColor="Black"></Label>
             <Entry Placeholder="Escribir contraseña" IsPassword="True"></Entry>
         </StackLayout>
+        </Frame>
         <!-- ES EL BOTON DE GUARDAR -->
-        <Frame Grid.Row="2" Grid.Column="0" CornerRadius="30" Margin="20,50,20,50" BackgroundColor="White" >
-            <StackLayout Margin="0,80,0,0">
+  
+            <StackLayout TranslationY="350">
+            <sombras:Shadows CornerRadius="20"
+            Shades="{sombras:SingleShade Offset='1,0',Opacity=1.1, Color=#FF7272,BlurRadius=10}">
                 <Button
+                    Margin="80,10,130,10"
+                    TranslationX="-70"
                     Text="Guardar"
                     TextColor="Black"
-                    HorizontalOptions="Center"
-                    BackgroundColor="#97FF83"
-                    BorderColor="#97FF83"
+                    TranslationY="20"
+                   
+                    BackgroundColor="#FF7272"
+                    BorderColor="#FF7272"
                     BorderWidth="6"
+                    
                     CornerRadius="15"
-                    FontSize="19"
-                    WidthRequest="150"
-                    HeightRequest="60" Command="{Binding DetailsCommand}"/>
-                <Button Text="Cerrar Sesion" Command="{Binding CloseSesionCommand}" TextColor="Black" HorizontalOptions="Center" BackgroundColor="#97FF83" BorderColor="#97FF83" 
-                        BorderWidth="7" CornerRadius="15" FontSize="19" WidthRequest="150" HeightRequest="70"/>
-            </StackLayout>
-        </Frame>
-    </Grid>
+                    FontSize="15"
+                    Command="{Binding DetailsCommand}"/>
+            </sombras:Shadows>
+            <sombras:Shadows CornerRadius="20"
+  Shades="{sombras:SingleShade Offset='1,0',Opacity=1.1, Color=#FF7272,BlurRadius=10}">
+                <Button Text="Cerrar Sesion" Command="{Binding CloseSesionCommand}" Margin="190,10,10,10" TextColor="Black" BackgroundColor="#FF7272" BorderColor="#FF7272" 
+                         CornerRadius="15" FontSize="15" WidthRequest="150" TranslationY="-53"/>
+            </sombras:Shadows>
+        </StackLayout>
+        <StackLayout.Background>
+            <LinearGradientBrush StartPoint="0.2,0.3" EndPoint="1,1">
+                <GradientStop Color="#FA4F4F" Offset="0.2" />
+                <GradientStop Color="White" Offset=".0"/>
+            </LinearGradientBrush>
+        </StackLayout.Background>
+    </StackLayout>
+
 </ContentPage>

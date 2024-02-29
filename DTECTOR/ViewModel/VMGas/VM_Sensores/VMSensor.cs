@@ -1,4 +1,5 @@
-﻿using DTECTOR.View.SensoresView;
+﻿using DTECTOR.View;
+using DTECTOR.View.SensoresView;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -26,7 +27,7 @@ namespace DTECTOR.ViewModel.VMGas.VM_Sensores
         }
         public async Task Volver()
         {
-            await Navigation.PushModalAsync(new EncenderSensor());
+            await Navigation.PushModalAsync(new TiempoReal());
         }
         public ICommand IrARegistrocommand => new Command(async () => await IrARegistro());
         public ICommand IrAEditarCommand => new Command(async () => await IrAEditar());

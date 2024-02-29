@@ -1,4 +1,5 @@
 ﻿using DTECTOR.View;
+using DTECTOR.View.SensoresView;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,7 +12,7 @@ namespace DTECTOR
         {
             InitializeComponent();
 
-            MainPage = new Login();
+            MainPage = new TiempoReal();
         }
 
         protected override void OnStart()

@@ -7,7 +7,7 @@
              NavigationPage.HasNavigationBar="False">
 
     <StackLayout>
-        <Frame BackgroundColor="#94f1b3" CornerRadius="20" HeightRequest="500" TranslationY="30" Margin="0,-40,0,0">
+        <Frame BackgroundColor="#FF6F6F" CornerRadius="20" HeightRequest="500" TranslationY="30" Margin="0,-40,0,0">
             <StackLayout>
 
 
@@ -18,20 +18,20 @@
 
                 <Label Text="REGISTRARSE" FontAttributes="Bold" FontSize="25" TextColor="Black" HorizontalOptions="Center" TranslationY="-100"></Label>
                 <Label Text="El correo ya existe" Margin="20,10,10,40" TextColor="Red" IsVisible="{Binding ShowError}" />
-                <Label Text="Email" FontSize="20" Margin="20,10,10,10" TranslationY="-60" TextColor="#269B0F"></Label>
+                <Label Text="Email" FontSize="20" Margin="20,10,10,10" TranslationY="-60" TextColor="Red"></Label>
                 <Entry x:Name="emailEntry" Margin="15,-25,30,0" Placeholder="" PlaceholderColor="Gray" TranslationY="-65" TextColor="Black" />
-                <Label Text="Contraseña" FontSize="20" Margin="20,10,10,10" TranslationY="-48" TextColor="#269B0F"></Label>
+                <Label Text="Contraseña" FontSize="20" Margin="20,10,10,10" TranslationY="-48" TextColor="Red"></Label>
                 <Entry Margin="15,-25,30,0" TranslationY="-40" IsPassword="True"   TextColor="Black"></Entry>
-                <Label Text="Numero" FontSize="20" Margin="20,10,10,10" TranslationY="-48" TextColor="#269B0F"></Label>
+                <Label Text="Numero" FontSize="20" Margin="20,10,10,10" TranslationY="-48" TextColor="Red"></Label>
                 <Entry Margin="15,-25,30,0" TranslationY="-40" TextColor="Black" Keyboard="Numeric"></Entry>
 
                 <Image Source="https://i.ibb.co/rppqPdC/visible.png" Margin="300,-50,10,20" HeightRequest="30"></Image>
                 <sombras:Shadows CornerRadius="100"
-        Shades="{sombras:SingleShade Offset='1,0',Opacity=1.0, Color=#94f1b3,BlurRadius=27}">
-                    <Button Text="ENTRAR" Margin="20,10,10,10" BackgroundColor="#94f1b3" CornerRadius="30" Command="{Binding GoMainCommand}" CommandParameter="{Binding Source={x:Reference emailEntry}, Path=Text}" />
+        Shades="{sombras:SingleShade Offset='1,0',Opacity=1.0, Color=#FF6F6F,BlurRadius=27}">
+                    <Button Text="ENTRAR" Margin="20,10,10,10" BackgroundColor="#FF6F6F" CornerRadius="30" Command="{Binding GoMainCommand}" CommandParameter="{Binding Source={x:Reference emailEntry}, Path=Text}" />
                 </sombras:Shadows>
                 <Label Margin="30,0,0,0" TextColor="Black" TranslationY="7">Ya tienes cuenta?</Label>
-                <Label Margin="150,-28,0,0" TextColor="#269B0F" TranslationY="10" Text="REGRESAR">
+                <Label Margin="150,-28,0,0" TextColor="Red" TranslationY="10" Text="REGRESAR">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding LoginCommand}"/>
                     </Label.GestureRecognizers>

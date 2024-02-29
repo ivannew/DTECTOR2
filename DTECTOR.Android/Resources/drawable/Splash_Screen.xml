@@ -6,5 +6,5 @@
 	<item>
 		<color android:color="@color/colorfondosplash"/>
 	</item>
-	<item android:drawable="@drawable/gas" android:gravity="center"></item>
+	<!--<item android:drawable="@drawable/gas" android:gravity="center"></item>-->
 </layer-list>

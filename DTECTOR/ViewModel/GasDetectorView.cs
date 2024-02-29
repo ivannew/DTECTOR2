@@ -64,7 +64,7 @@ namespace DTECTOR.ViewModel
             using (SKPaint arcPaint = new SKPaint())
             {
                 arcPaint.Style = SKPaintStyle.Stroke;
-                arcPaint.Color = new SKColor(0x97, 0xFF, 0x83); // Color #97FF83
+                arcPaint.Color = new SKColor(0x00, 0x00, 0x00); // Color #97FF83
                 arcPaint.StrokeWidth = strokeWidth;
 
                 float startAngle = -90;
@@ -77,7 +77,7 @@ namespace DTECTOR.ViewModel
             using (SKPaint textPaint = new SKPaint())
             {
                 textPaint.Style = SKPaintStyle.Fill;
-                textPaint.Color = new SKColor(0x97, 0xFF, 0x83); // Color #97FF83
+                textPaint.Color = new SKColor(0x00, 0x00, 0x00); // Color #97FF83
                 textPaint.TextSize = 40;
                 textPaint.TextAlign = SKTextAlign.Center;
 

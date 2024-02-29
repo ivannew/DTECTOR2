@@ -8,10 +8,10 @@
              >
 
     <StackLayout>
-        <Frame BackgroundColor="#94f1b3" CornerRadius="20" HeightRequest="500" TranslationY="30" Margin="0,-40,0,0">
+        <Frame BackgroundColor="#FF6F6F" CornerRadius="20" HeightRequest="500" TranslationY="30" Margin="0,-40,0,0">
             <StackLayout>
                 <Image Source="https://i.ibb.co/28d3LBM/gas.png" HeightRequest="80" WidthRequest="100" Margin="10,30,10,10"></Image>
-                <Label TextColor="Gray" HorizontalOptions="Center"  FontSize="30">D-TECTOR</Label>
+                <Label TextColor="White" HorizontalOptions="Center"  FontSize="30">D-TECTOR</Label>
             </StackLayout>
         </Frame>
         <Frame Margin="25,15,25,10" TranslationY="-80" CornerRadius="30">
@@ -19,16 +19,16 @@
 
                 <Label Text="LOGIN" FontAttributes="Bold" FontSize="25" TextColor="Black" HorizontalOptions="Center" TranslationY="-100"></Label>
                 <Label Text="Datos erróneos. Por favor, inténtelo otra vez." Margin="20,0,0,40" TextColor="Red" IsVisible="{Binding ShowError}"></Label>
-                <Label Text="Email" FontSize="20" Margin="20,10,10,10" TranslationY="-60" TextColor="#269B0F"></Label>
+                <Label Text="Email" FontSize="20" Margin="20,10,10,10" TranslationY="-60" TextColor="Red"></Label>
                 <Entry Margin="15,-25,30,0" Placeholder="" Text="{Binding Email, Mode=TwoWay}" PlaceholderColor="Gray" TranslationY="-65" TextColor="Black"></Entry>
-                <Label Text="Contraseña" FontSize="20" Margin="20,10,10,10" TranslationY="-48" TextColor="#269B0F"></Label>
+                <Label Text="Contraseña" FontSize="20" Margin="20,10,10,10" TranslationY="-48" TextColor="Red"></Label>
                 <Entry Margin="15,-25,30,0" TranslationY="-40" Text="{Binding Password, Mode=TwoWay}" IsPassword="True"   TextColor="Black"></Entry>
                 <Image Source="https://i.ibb.co/rppqPdC/visible.png" Margin="300,-50,10,20" HeightRequest="30"></Image>
-                <sombras:Shadows CornerRadius="100" Shades="{sombras:SingleShade Offset='1,0',Opacity=1.0, Color=#94f1b3,BlurRadius=27}">
-                    <Button Text="ENTRAR" Margin="20,10,10,10" BackgroundColor="#94f1b3" CornerRadius="30" Command="{Binding IniciarCommand}"/>
+                <sombras:Shadows CornerRadius="100" Shades="{sombras:SingleShade Offset='1,0',Opacity=1.0, Color=#FF6F6F,BlurRadius=27}">
+                    <Button Text="ENTRAR" Margin="20,10,10,10" BackgroundColor="#FF6F6F" CornerRadius="30" Command="{Binding IniciarCommand}"/>
                 </sombras:Shadows>
                 <Label Margin="30,0,0,0" TextColor="Black">No tienes cuenta?</Label>
-                <Label Margin="155,-29,0,0" TextColor="#269B0F" TranslationY="3" Text="REGISTRARSE">
+                <Label Margin="155,-29,0,0" TextColor="Red" TranslationY="3" Text="REGISTRARSE">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Command="{Binding registrarCommand}"/>
                     </Label.GestureRecognizers>
