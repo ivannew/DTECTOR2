@@ -24,15 +24,11 @@
 
         <StackLayout>
 
-            <StackLayout>
-                <sombras:Shadows CornerRadius="20"
-              Shades="{sombras:SingleShade Offset='0,5',Opacity=1.3, Color=#FFFFFF,BlurRadius=19}">
-                    <Button Text="SENSOR on/off" BackgroundColor="White" TextColor="Black" Command="{Binding EncenderSensorCommand}" Margin="100,10,120,10" TranslationX="100" CornerRadius="20" />
-                </sombras:Shadows>
-                <sombras:Shadows CornerRadius="20"
-   Shades="{sombras:SingleShade Offset='0,5',Opacity=1.3, Color=#FFFFFF,BlurRadius=19}">
-                    <Button Text="motor on/off" BackgroundColor="White" Command="{Binding EncenderMotorCommand}"  TextColor="Black" Margin="100,10,120,10" TranslationX="-80" TranslationY="-75" CornerRadius="20"/>
-                </sombras:Shadows>
+            <StackLayout Margin="0,10,0,80">
+                <Grid>
+                    <Button Grid.Column="0" Grid.Row="0" Text="SENSOR on/off" BackgroundColor="White" TextColor="Black" Command="{Binding EncenderSensorCommand}" CornerRadius="20" />
+                    <Button Grid.Column="1" Grid.Row="0" Text="motor on/off" BackgroundColor="White" Command="{Binding EncenderMotorCommand}"  TextColor="Black" CornerRadius="20"/>
+                </Grid>
             </StackLayout>
             <StackLayout>
 

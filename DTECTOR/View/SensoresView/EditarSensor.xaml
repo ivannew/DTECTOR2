@@ -10,7 +10,7 @@
     <StackLayout>
         <Image Source="https://i.ibb.co/bRffpVM/flecha-izquierda.png" WidthRequest="50" Margin="-10,10,290,-20">
             <Image.GestureRecognizers>
-                <TapGestureRecognizer Command="{Binding VolverCommand}"/>
+                <TapGestureRecognizer Command="{Binding Volvercommand}"/>
             </Image.GestureRecognizers>
         </Image>
         <Label Text="SENSOR" FontSize="40" TextColor="Black" HorizontalOptions="Center" />
@@ -30,7 +30,7 @@
             <sombras:Shadows CornerRadius="20"
               Shades="{sombras:SingleShade Offset='1,0',Opacity=1.1, Color=#FA4F4F,BlurRadius=20}">
 
-                <Button Text="Editar" CornerRadius="20" Margin="60,0,60,10" BackgroundColor="#FF7272" Command="{Binding EditarCommand}"/>
+                <Button Text="Editar" CornerRadius="20" Margin="60,0,60,10" BackgroundColor="#FF7272" Command="{Binding Editarcommand}"/>
             </sombras:Shadows>
         </StackLayout>
         <StackLayout.Background>

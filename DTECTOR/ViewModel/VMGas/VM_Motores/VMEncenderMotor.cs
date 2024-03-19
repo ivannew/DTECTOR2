@@ -10,19 +10,27 @@ namespace DTECTOR.ViewModel.VMGas.VM_Motores
 {
     public class VMEncenderMotor : BaseViewModel
     {
-        private bool _encenderActivo;
-        private bool _apagarActivo;
-
-        public bool EncenderActivo
+        private bool _isEncenderClicked;
+        public bool IsEncenderClicked
         {
-            get => _encenderActivo;
-            set => SetProperty(ref _encenderActivo, value);
+            get { return _isEncenderClicked; }
+            set
+            {
+                if (_isEncenderClicked != value)
+                {
+                    _isEncenderClicked = value;
+                    OnPropertyChanged(nameof(IsEncenderClicked));
+                    OnPropertyChanged(nameof(StackLayoutBackgroundColor));
+                }
+            }
         }
 
-        public bool ApagarActivo
+        public Color StackLayoutBackgroundColor
         {
-            get => _apagarActivo;
-            set => SetProperty(ref _apagarActivo, value);
+            get
+            {
+                return IsEncenderClicked ? Color.FromHex("#C8E6C9") : Color.FromHex("#F0E8E8");
+            }
         }
         #region Builder
         public VMEncenderMotor(INavigation navigation)
@@ -43,19 +51,30 @@ namespace DTECTOR.ViewModel.VMGas.VM_Motores
         {
             await Navigation.PushModalAsync(new TiempoReal());
         }
+        public async Task CambiarColor()
+        {
+            IsEncenderClicked = true;
+        }
+        public async Task HandleEncenderClicked()
+        {
+            // Lógica adicional si es necesario
+            IsEncenderClicked = true;
+        }
         #endregion
         #region Commands
         public ICommand irCommand => new Command(async () => await IRA());
+        public ICommand CambiarColorCommand => new Command(async () => await CambiarColor());
         public ICommand MotoresCommand => new Command(async () => await DetallesMotores());
         public ICommand VolverCommand => new Command(async () => await Volver());
+        public ICommand TriggerCommand => new Command(async () => await HandleEncenderClicked());
         #endregion
-        public ICommand MotoresTrigerCommand => new Command<string>((accion) =>
-        {
-            // Lógica para procesar la acción (encender o apagar)
+        //public ICommand MotoresTrigerCommand => new Command<string>((accion) =>
+        //{
+        //    // Lógica para procesar la acción (encender o apagar)
 
-            // Actualizar propiedades booleanas
-            EncenderActivo = accion == "Encender";
-            ApagarActivo = accion == "Apagar";
-        });
+        //    // Actualizar propiedades booleanas
+        //    EncenderActivo = accion == "Encender";
+        //    ApagarActivo = accion == "Apagar";
+        //});
     }
 }

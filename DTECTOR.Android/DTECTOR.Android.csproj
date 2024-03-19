@@ -55,6 +55,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
     <PackageReference Include="Sharpnado.Shadows">
       <Version>1.2.1</Version>
     </PackageReference>
@@ -100,7 +103,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\xml\network_security_config.xml" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTECTOR\DTECTOR.csproj">
       <Project>{4262EFE8-D276-4745-B3A0-9757D47C0244}</Project>

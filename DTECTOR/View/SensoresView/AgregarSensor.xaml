@@ -3,64 +3,39 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DTECTOR.View.SensoresView.AgregarSensor"
              NavigationPage.HasNavigationBar="False"
-                          BackgroundColor="White">
+                          BackgroundColor="White"
+              xmlns:sombras="clr-namespace:Sharpnado.Shades;assembly=Sharpnado.Shadows">
 
-    <Grid RowDefinitions="80,*"
-        BackgroundColor="White">
-        <StackLayout Orientation="Horizontal" Padding="15">
+    <StackLayout>
+        <Image Source="https://i.ibb.co/bRffpVM/flecha-izquierda.png" WidthRequest="50" Margin="-10,10,290,-20">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding VolverCommand}"/>
+            </Image.GestureRecognizers>
+        </Image>
+        <Label Text="SENSOR" FontSize="40" TextColor="Black" HorizontalOptions="Center" />
 
-            <Image Source="https://i.ibb.co/QQT9zmJ/respuesta.png" WidthRequest="70">
-                <Image.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding Volvercommand}"/>
-                </Image.GestureRecognizers>
-            </Image>
-
-        </StackLayout>
-        <StackLayout Grid.Row="1" Margin="10">
-            <StackLayout Orientation="Horizontal">
-
-                <Entry Placeholder="Nombre" PlaceholderColor="Gray" 
-            TextColor="Black"
-            VerticalOptions="CenterAndExpand"
-            HorizontalOptions="FillAndExpand"/>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal">
-                <Entry Placeholder="Ubicación" PlaceholderColor="Gray" 
-           TextColor="Black"
-           VerticalOptions="CenterAndExpand"
-           HorizontalOptions="FillAndExpand"/>
-            </StackLayout>
-            <StackLayout>
-                <Entry Placeholder="Estado: " 
-           TextColor="Black"
-           
-                     VerticalOptions="CenterAndExpand"
-     HorizontalOptions="FillAndExpand"/>
-            </StackLayout>
-            <!--BOTON DE AGG -->
-
-            <Frame HorizontalOptions="Center"
-                 Padding="6"
-                 
-                 Margin="0,150,0,0"
-                 CornerRadius="30"
-                 HasShadow="False"
-                 BackgroundColor="DarkRed">
-                <Button
-                  Text="+"
-                  TextColor="White"
-                  HorizontalOptions="Center"
-                  BackgroundColor="DarkRed"
-                  BorderColor="DarkRed"
-                  BorderWidth="6"
-                  CornerRadius="15"
-                  FontSize="25"
-                  WidthRequest="150"
-                  HeightRequest="60"
-                  Command="{Binding Insertarcommand}"/>
+        <StackLayout>
+            <Frame CornerRadius="20" BackgroundColor="#ffff" Margin="20,10,20,10" HeightRequest="300" >
+                <StackLayout>
+              
+                    <Entry x:Name="txtnumero" Placeholder="Modelo" TextColor="Black" PlaceholderColor="Gray"/>
+                    <Entry x:Name="txtmodelo" Placeholder="Ubicacion"  PlaceholderColor="Gray"/>
+                    <Entry x:Name="txtubicacion" Placeholder="Ubicacion"  PlaceholderColor="Gray"/>
+                    <Entry x:Name="txtfecha" Placeholder="Ubicacion" PlaceholderColor="Gray"/>
+                </StackLayout>
             </Frame>
 
+            <sombras:Shadows CornerRadius="20"
+     Shades="{sombras:SingleShade Offset='1,0',Opacity=1.1, Color=#FA4F4F,BlurRadius=20}">
+
+                <Button Text="agregar" CornerRadius="20" Margin="60,0,60,10" BackgroundColor="#FF7272" Clicked="Button_Clicked"/>
+            </sombras:Shadows>
         </StackLayout>
-    </Grid>
+        <StackLayout.Background>
+            <LinearGradientBrush StartPoint="0.2,0.3" EndPoint="1,1">
+                <GradientStop Color="#FA4F4F" Offset="0.2" />
+                <GradientStop Color="White" Offset=".0"/>
+            </LinearGradientBrush>
+        </StackLayout.Background>
+    </StackLayout>
 </ContentPage>

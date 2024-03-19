@@ -46,7 +46,7 @@
                     <Button Text="Editar:" BackgroundColor="#F8FF84" CornerRadius="10" TextColor="Black" Grid.Column="1" Grid.Row="2" Command="{Binding EditarCommand}"/>
                 </StackLayout>
             </Frame>
-            
+            <Button Text="+" Command="{Binding CrearCommand}"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>

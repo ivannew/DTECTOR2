@@ -28,11 +28,23 @@
                             <Label Text="Nombre" TextColor="Black" />
                             <Label Text="Fecha" TextColor="Black" />
                             <Label Text="Ubicación" TextColor="Black" />
-                            <Button Text="Encender" BackgroundColor="#C8E6C9" TextColor="Black" CornerRadius="10" FontSize="16"/>
-                            <Button Text="Apagar" BackgroundColor="#FFCDD2" TextColor="Black" CornerRadius="10" FontSize="16"/>
+                            <Button x:Name="encender" Text="Encender" BackgroundColor="#C8E6C9" TextColor="Black" CornerRadius="10" FontSize="16" Command="{Binding CambiarColorCommand}">
+                                <Button.Triggers>
+                                    <Trigger TargetType="Button" Property="IsFocused" Value="{Binding IsEncenderClicked}">
+                                        <Setter Property="BackgroundColor" Value="Green"/>
+                                    </Trigger>
+                                </Button.Triggers>
+                                
+                            </Button>
+                            <Button x:Name="apagar" Text="Apagar" BackgroundColor="#FFCDD2" TextColor="Black" CornerRadius="10" FontSize="16"/>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding MotoresCommand}"/>
                             </StackLayout.GestureRecognizers>
+                            <!--<StackLayout.Triggers>
+                                <DataTrigger TargetType="StackLayout" Binding="{Binding Source={x:Reference encender}, Path=IsFocused}" Value="true">
+                                    <Setter Property="BackgroundColor" Value="#C8E6C9"/>
+                                </DataTrigger>
+                            </StackLayout.Triggers>-->
                         </StackLayout>
                     </Frame>
 

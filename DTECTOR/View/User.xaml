@@ -25,40 +25,29 @@
         <Frame TranslationY="20" CornerRadius="20" Margin="10,10,10,-300">
             <StackLayout>
             <Label Text="Nombre: " TextColor="Black"></Label>
-            <Entry Placeholder="Agregar Nombre"></Entry>
+            <Entry Placeholder="Agregar Nombre" PlaceholderColor="Gray"></Entry>
             <Label Text="Número: " TextColor="Black"></Label>
-            <Entry Placeholder="Agregar Número" Keyboard="Numeric"></Entry>
+                <Entry Placeholder="Agregar Número" Keyboard="Numeric" PlaceholderColor="Gray"></Entry>
             <Label Text="Correo: " TextColor="Black"></Label>
-            <Entry Placeholder="(Opcional)" Keyboard="Email"></Entry>
+                <Entry Placeholder="(Opcional)" Keyboard="Email" PlaceholderColor="Gray"></Entry>
             <Label Text="Contraseña: " TextColor="Black"></Label>
             <Entry Placeholder="Escribir contraseña" IsPassword="True"></Entry>
         </StackLayout>
         </Frame>
         <!-- ES EL BOTON DE GUARDAR -->
-  
-            <StackLayout TranslationY="350">
-            <sombras:Shadows CornerRadius="20"
-            Shades="{sombras:SingleShade Offset='1,0',Opacity=1.1, Color=#FF7272,BlurRadius=10}">
-                <Button
-                    Margin="80,10,130,10"
-                    TranslationX="-70"
-                    Text="Guardar"
-                    TextColor="Black"
-                    TranslationY="20"
-                   
-                    BackgroundColor="#FF7272"
-                    BorderColor="#FF7272"
-                    BorderWidth="6"
-                    
-                    CornerRadius="15"
-                    FontSize="15"
-                    Command="{Binding DetailsCommand}"/>
-            </sombras:Shadows>
-            <sombras:Shadows CornerRadius="20"
-  Shades="{sombras:SingleShade Offset='1,0',Opacity=1.1, Color=#FF7272,BlurRadius=10}">
-                <Button Text="Cerrar Sesion" Command="{Binding CloseSesionCommand}" Margin="190,10,10,10" TextColor="Black" BackgroundColor="#FF7272" BorderColor="#FF7272" 
-                         CornerRadius="15" FontSize="15" WidthRequest="150" TranslationY="-53"/>
-            </sombras:Shadows>
+
+        <StackLayout TranslationY="350">
+            <Grid>
+                <Button Grid.Column="0" Grid.Row="0" Text="Guardar" TextColor="Black" BackgroundColor="#FF7272" BorderColor="#FF7272"
+        BorderWidth="6"
+        
+        CornerRadius="15"
+        FontSize="15"
+        Command="{Binding DetailsCommand}"/>
+                <Button Grid.Column="1" Grid.Row="0" Text="Cerrar Sesion" Command="{Binding CloseSesionCommand}" TextColor="Black" BackgroundColor="#FF7272" BorderColor="#FF7272" 
+             CornerRadius="15" FontSize="15" WidthRequest="150"/>
+            </Grid>
+            
         </StackLayout>
         <StackLayout.Background>
             <LinearGradientBrush StartPoint="0.2,0.3" EndPoint="1,1">

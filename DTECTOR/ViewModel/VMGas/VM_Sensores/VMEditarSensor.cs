@@ -1,4 +1,5 @@
-﻿using DTECTOR.View.SensoresView;
+﻿using DTECTOR.View;
+using DTECTOR.View.SensoresView;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -23,7 +24,7 @@ namespace DTECTOR.ViewModel.VMGas.VM_Sensores
         public async Task Editar()
         {
 
-            await Volver();
+            await Navigation.PushModalAsync(new sensores());
             await MostrarAlerta("Nota editada correctamente", "OK");
 
         }
@@ -40,7 +41,7 @@ namespace DTECTOR.ViewModel.VMGas.VM_Sensores
             await MostrarAlerta("Nota Eliminada correctamente", "OK");
 
         }
-
+    
         public async Task Volver()
         {
             await Navigation.PushModalAsync(new sensores());

@@ -12,7 +12,7 @@ namespace DTECTOR
         {
             InitializeComponent();
 
-            MainPage = new TiempoReal();
+            MainPage = new AgregarSensor();
         }
 
         protected override void OnStart()
